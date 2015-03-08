@@ -7,13 +7,23 @@
                   stdlib,
                   riak_pb
                  ]},
-  {registered, []},
+  {registered, [ ]},
   {env, [
          %% Set default timeout for operations.
          %% Individual operation timeouts can be supplied,
          %% e.g. get_timeout, put_timeout that will 
          %% override the default.
          {timeout, 60000}
-        ]}
+        ]},
+  {modules, [
+             riakc_pb_socket,
+             riakc_obj,
+             riakc_counter,
+             riakc_datatype,
+             riakc_flag,
+             riakc_map,
+             riakc_register,
+             riakc_set
+            ]}
  ]}.
 
